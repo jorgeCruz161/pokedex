@@ -1,0 +1,31 @@
+
+<div class="container">
+    <mat-card class=" size-card ">
+        <mat-card-header class="center-elements">
+            <mat-card-title > 
+                <img mat-card-image src="assets/images/pokemon-logo.svg" alt="pokedex logo"> 
+            </mat-card-title>
+            <mat-card-subtitle> Pokedex  </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+    
+            <mat-grid-list cols="3" rowHeight="2:1">
+                <mat-grid-tile colspan="2" rowspan="2"  [style.background] ="color" > 
+    
+                    <app-screen [_pokeData]="putPokeData"  ></app-screen>
+                        
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" > 
+                    <app-form-search  (items)="getPokeData($event)" ></app-form-search>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1" > 
+                    <mat-slide-toggle> Limpiar </mat-slide-toggle>
+                </mat-grid-tile>  
+            </mat-grid-list>
+            
+        
+        </mat-card-content>
+     
+    </mat-card>
+
+</div>
